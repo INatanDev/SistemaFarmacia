@@ -1,1 +1,1 @@
-# SistemaFarmacia
+# Sistema para Gerenciamento de Farmácia 
