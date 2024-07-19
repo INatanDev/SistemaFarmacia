@@ -1,0 +1,21 @@
+CREATE TABLE Funcionario (
+    idFuncionario INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    cpf VARCHAR(14),
+    rg VARCHAR(12),
+    usuario VARCHAR(50),
+    senha VARCHAR(50),
+    endereco VARCHAR(255),
+    numCasa VARCHAR(10),
+    complemento VARCHAR(255),
+    bairro VARCHAR(255),
+    cidade VARCHAR(255),
+    uf VARCHAR(2),
+    cep VARCHAR(10),
+    dtaRegistro DATE,
+    tel VARCHAR(15),
+    cel VARCHAR(15),
+    email VARCHAR(100),
+    sexo CHAR(1),
+    admin CHAR(1)
+);
