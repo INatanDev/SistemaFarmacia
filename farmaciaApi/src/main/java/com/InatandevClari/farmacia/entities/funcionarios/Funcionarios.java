@@ -1,4 +1,4 @@
-package com.InatandevClari.farmacia.domain.models.funcionarios;
+package com.InatandevClari.farmacia.entities.funcionarios;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.Objects;
 
 @Entity
 @Table(name = "funcionarios")
@@ -22,8 +23,10 @@ public class Funcionarios {
 
     private String nome;
 
+    @Column(length = 11)
     private String cpf;
 
+    @Column(length = 11)
     private String rg;
 
     private String usuario;
@@ -44,6 +47,7 @@ public class Funcionarios {
 
     private String cep;
 
+    @Temporal(TemporalType.TIMESTAMP)
     private Date dtaRegistro;
 
     private String tel;
@@ -56,4 +60,20 @@ public class Funcionarios {
 
     private char admin;
 
+    @PrePersist
+    public void prePersist(){
+        dtaRegistro = new Date();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Funcionarios that)) return false;
+        return Objects.equals(id, that.id) && Objects.equals(cpf, that.cpf);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, cpf);
+    }
 }
