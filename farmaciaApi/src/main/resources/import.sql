@@ -1,2 +1,0 @@
-INSERT INTO tb_category(nome, cpf, rg, usuario, senha, endereco, numCasa, complemento, bairro, cidade, uf, cep, dtaRegistro, tel, cel, email, sexo, admin)
-VALUES('admin', '12345678901', '01987654321', 'admin', 'admin', 'rua teste dos santos', '44a', 'casa2', 'joana bezerra', 'recife', 'Pernambuco', '18762675', NOW(), '8112345678', '8198765432', 'admin@teste.com', 'M', 'S');

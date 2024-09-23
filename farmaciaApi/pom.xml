@@ -91,7 +91,7 @@
 		<dependency>
 			<groupId>org.hibernate.orm</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>6.1.0.Final</version> <!-- Verifique a versão correta -->
+			<version>6.1.0.Final</version>
 		</dependency>
 
 		<!-- Dependencia JWT -->
@@ -113,7 +113,14 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-    </dependencies>
+		<!-- Validation -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
+
+	</dependencies>
 
 	<build>
 		<plugins>
